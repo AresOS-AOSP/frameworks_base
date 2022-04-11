@@ -50,4 +50,10 @@
     <!-- Kill button in notification guts -->
     <string name="force_stop_dlg_title">Force stop?</string>
     <string name="force_stop_dlg_text">If you force stop an app, it may misbehave.</string>
+
+    <!-- Preferred network tile -->
+    <string name="quick_settings_preferred_network_label">Preferred network</string>
+    <string name="quick_settings_preferred_network_lte">4G / LTE</string>
+    <string name="quick_settings_preferred_network_nr">5G / NR</string>
+    <string name="quick_settings_preferred_network_unsupported">Unsupported</string>
 </resources>
