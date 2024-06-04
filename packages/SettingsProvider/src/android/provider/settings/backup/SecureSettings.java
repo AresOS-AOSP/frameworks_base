@@ -268,6 +268,7 @@ public class SecureSettings {
         Settings.Secure.STYLUS_POINTER_ICON_ENABLED,
         Settings.Secure.CAMERA_EXTENSIONS_FALLBACK,
         Settings.Secure.MEDIA_CONTROLS_ALWAYS_SHOW_TIME,
-        Settings.Secure.VISUAL_QUERY_ACCESSIBILITY_DETECTION_ENABLED
+        Settings.Secure.VISUAL_QUERY_ACCESSIBILITY_DETECTION_ENABLED,
+        Settings.Secure.MEDIA_CONTROLS_ACTIONS,
     };
 }
