@@ -269,6 +269,7 @@ public class SecureSettings {
         Settings.Secure.CAMERA_EXTENSIONS_FALLBACK,
         Settings.Secure.MEDIA_CONTROLS_ALWAYS_SHOW_TIME,
         Settings.Secure.VISUAL_QUERY_ACCESSIBILITY_DETECTION_ENABLED,
+        Settings.Secure.MEDIA_CONTROLS_TIME_AS_NEXT,
         Settings.Secure.MEDIA_CONTROLS_ACTIONS,
     };
 }

@@ -424,6 +424,7 @@ public class SecureSettingsValidators {
         VALIDATORS.put(Secure.CAMERA_EXTENSIONS_FALLBACK, BOOLEAN_VALIDATOR);
         VALIDATORS.put(Secure.HIDE_DEVELOPER_STATUS, ANY_STRING_VALIDATOR);
         VALIDATORS.put(Secure.MEDIA_CONTROLS_ALWAYS_SHOW_TIME, BOOLEAN_VALIDATOR);
+        VALIDATORS.put(Secure.MEDIA_CONTROLS_TIME_AS_NEXT, BOOLEAN_VALIDATOR);
         VALIDATORS.put(Secure.MEDIA_CONTROLS_ACTIONS,
                 new DiscreteValueValidator(new String[] {"0", "1", "2", "3", "4", "5"}));
     }
