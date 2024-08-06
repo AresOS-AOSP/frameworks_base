@@ -18,6 +18,7 @@ package com.android.internal.util.custom;
 
 import android.content.Context;
 import android.os.Build;
+import android.os.SystemProperties;
 import android.text.TextUtils;
 import android.util.Log;
 
@@ -26,10 +27,16 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class GamesPropsUtils {
+/**
+ * @hide
+ */
+public final class GamesPropsUtils {
 
     private static final String TAG = GamesPropsUtils.class.getSimpleName();
     private static final boolean DEBUG = false;
+
+    private static Boolean sEnableGameProps =
+            SystemProperties.getBoolean("persist.sys.gamehooks.enable", true);
 
     private static final Map<String, Map<String, Object>> propsToChange = new HashMap<>();
     private static final Map<String, String[]> packagesToChange = new HashMap<>();
@@ -225,6 +232,10 @@ public class GamesPropsUtils {
     }
 
     public static void setProps(Context context) {
+        if (!sEnableGameProps) {
+            return;
+        }
+    
         final String packageName = context.getPackageName();
 
         if (TextUtils.isEmpty(packageName)) {
