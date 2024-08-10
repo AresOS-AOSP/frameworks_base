@@ -35,8 +35,8 @@
 
     <!-- Data usage info in QS footer -->
     <string name="usage_data">used today</string>
-    <string name="usage_data_default_suffix">Data</string>
-    <string name="usage_wifi_default_suffix">Wi-Fi</string>
+    <string name="usage_data_default_suffix">(Data)</string>
+    <string name="usage_wifi_default_suffix">(Wi-Fi)</string>
 
     <!-- Kill button in notification guts -->
     <string name="force_stop_dlg_title">Force stop?</string>
