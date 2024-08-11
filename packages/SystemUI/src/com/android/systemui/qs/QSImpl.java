@@ -522,12 +522,13 @@ public class QSImpl implements QS, CommandQueue.Callbacks, StatusBarStateControl
         mHeader.setExpanded((keyguardShowing && !mHeaderAnimating && !mShowCollapsedOnKeyguard)
                 || (mQsExpanded && !mStackScrollerOverscrolling), mQuickQSPanelController);
         boolean qsPanelVisible = !mQsDisabled && expandVisually;
-        boolean footerVisible = qsPanelVisible && (mQsExpanded || !keyguardShowing
-                || mHeaderAnimating || mShowCollapsedOnKeyguard);
-        mFooter.setVisibility(footerVisible ? View.VISIBLE : View.INVISIBLE);
-        if (mFooterActionsView != null) {
-            mFooterActionsView.setVisibility(footerVisible ? View.VISIBLE : View.INVISIBLE);
-        }
+    boolean isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
+    boolean footerVisible = qsPanelVisible && (mQsExpanded || !keyguardShowing || mHeaderAnimating || mShowCollapsedOnKeyguard) && !isLandscape;
+
+    mFooter.setVisibility(footerVisible ? View.VISIBLE : View.GONE);
+    if (mFooterActionsView != null) {
+        mFooterActionsView.setVisibility(footerVisible ? View.VISIBLE : View.GONE);
+    }
         mFooter.setExpanded((keyguardShowing && !mHeaderAnimating && !mShowCollapsedOnKeyguard)
                 || (mQsExpanded && !mStackScrollerOverscrolling));
         mQSPanelController.setVisibility(qsPanelVisible ? View.VISIBLE : View.INVISIBLE);
